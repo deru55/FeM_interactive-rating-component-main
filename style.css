@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+:root {
+  --ff-default: "Overpass", sans-serif;
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --clr-primary-1: hsl(25, 97%, 53%);
+
+  --clr-neutral-1: hsl(0, 0%, 100%);
+  --clr-neutral-2: hsl(217, 12%, 63%);
+  --clr-neutral-3: hsl(213, 19%, 18%);
+  --clr-neutral-4: hsl(216, 12%, 8%);
+
+  --clr-custom-neutral-3: hsl(213, 19%, 25%);
+}
+
+/* utilities classes */
+.grid-flow {
+  display: grid;
+  gap: 1rem;
+}
+
+.circle {
+  background-color: var(--clr-custom-neutral-3);
+  width: 2.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.selected-rating {
+  background-color: var(--clr-primary-1);
+  color: var(--clr-neutral-4);
+}
+
+body {
+  font-family: var(--ff-default);
+  font-size: 0.85rem;
+  font-weight: var(--fw-400);
+  color: var(--clr-neutral-2);
+  line-height: 1.6;
+  background-color: var(--clr-neutral-4);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  background-color: var(--clr-neutral-3);
+  border-radius: 1rem;
+  margin-inline: 1.5rem;
+  padding: 2rem 1.5rem;
+  max-width: 26rem;
+}
+
+.icon-star {
+  background-image: url(images/icon-star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: var(--fw-700);
+  color: var(--clr-neutral-1);
+}
+
+.card__ratings {
+  font-weight: var(--fw-700);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card__ratings li {
+  cursor: pointer;
+}
+
+.card__ratings li:where(:hover, :focus):not(.selected) {
+  color: var(--clr-neutral-4);
+  background-color: var(--clr-neutral-1);
+}
+
+.card__submit-btn {
+  font-weight: var(--fw-700);
+  letter-spacing: 2px;
+  border: 0;
+  background-color: var(--clr-primary-1);
+  border-radius: 100vh;
+  padding: 0.625rem 1.5rem;
+}
+
+.card__submit-btn:where(:hover, :focus) {
+  cursor: pointer;
+  background-color: var(--clr-neutral-1);
+}
+
+.thank-you-state {
+  text-align: center;
+  justify-items: center;
+}
+
+.selection {
+  background-color: var(--clr-custom-neutral-3);
+  border-radius: 100vh;
+  padding: 0.25rem 1rem;
+  color: var(--clr-primary-1);
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    font-size: 0.938rem;
+  }
+
+  .card {
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  .card__title {
+    font-size: 1.75rem;
+  }
+
+  .card__ratings li {
+    width: 3rem;
+  }
+}

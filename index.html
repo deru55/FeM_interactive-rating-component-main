@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive rating component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <div id="home-state" class="home-state | grid-flow">
+          <div class="icon-star | circle"></div>
+
+          <h2 class="card__title">How did we do?</h2>
+
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+
+          <ul class="card__ratings">
+            <li class="circle" value="1">1</li>
+            <li class="circle" value="2">2</li>
+            <li class="circle" value="3">3</li>
+            <li class="circle" value="4">4</li>
+            <li class="circle" value="5">5</li>
+          </ul>
+
+          <button type="button" id="submit-btn" class="card__submit-btn">
+            SUBMIT
+          </button>
+        </div>
+
+        <div id="thank-you-state" class="thank-you-state | grid-flow hidden">
+          <img src="images/illustration-thank-you.svg" alt="" />
+
+          <div id="selection" class="selection"></div>
+
+          <p class="card__title">Thank you!</p>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don't hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
